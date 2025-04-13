@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < ufoDialogues.length) {
         typeWriter(ufoDialogues[i], bubbleText, 50, () => {
           i++;
-          setTimeout(typeNextDialogue, 0);
+          setTimeout(typeNextDialogue, 1200);
         });
       } else {
         setTimeout(enableClick, 100); // enableClick after all dialogues done
@@ -79,25 +79,26 @@ window.addEventListener('DOMContentLoaded', () => {
     bubble.style.opacity = 1;
     disableClick();
     typeUFOAndEnableClick();
-  }, 0);
+  }, 2500);
 
-  document.body.addEventListener('click', () => {
+  // For both click and touch
+  const handleInteraction = () => {
     if (clickEnabled && !ufoClicked) {
       ufoClicked = true;
       disableClick();
       
-          // 🔊 Start background music here
-          bgMusic.volume = 0.15;
-          bgMusic.play().then(() => {
-            console.log('Music started on UFO click ✅');
-          }).catch(err => {
-            console.log('Music failed to play:', err);
-          });
-      
-          ufo.style.transition = 'all 2s ease';
-          ufo.style.bottom = '100%';
-          ufo.style.opacity = 0;
-          bubble.style.opacity = 0;
+      // 🔊 Start background music here
+      bgMusic.volume = 0.15;
+      bgMusic.play().then(() => {
+        console.log('Music started on UFO click ✅');
+      }).catch(err => {
+        console.log('Music failed to play:', err);
+      });
+  
+      ufo.style.transition = 'all 2s ease';
+      ufo.style.bottom = '100%';
+      ufo.style.opacity = 0;
+      bubble.style.opacity = 0;
       
 
       setTimeout(() => {
@@ -110,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
           typeAlienDialogue(() => {
             setTimeout(() => {
               alien.style.transition = 'all 2s ease';
-              alien.style.bottom = '55%';
+              alien.style.bottom = '42%';
               alienBubble.style.transition = 'opacity 1s ease';
               alienBubble.style.opacity = 0;
 
@@ -136,6 +137,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 500);
       }, 700);
     }
+  };
+
+  // Add both event listeners
+  document.body.addEventListener('click', handleInteraction);
+  document.body.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    handleInteraction();
   });
 
   function typeAlienDialogue(finalCallback) {
@@ -145,7 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
       "Lagta hai koi cute sa sapna chal raha hai...",
       "Wait...! yeh sapna nahi, asli glow-up hai!",
       "Ab yaad aaya! Boss ne tmhari cuteness ka zikr kiya tha..!!",
-      "Boss ne bola tha — ‘jab wo aaye, to dil se welcome karna!’",
+      "Boss ne bola tha — 'jab wo aaye, to dil se welcome karna!'",
       "Cutiee... tum toh expectation se bhi zyada cute nikli!"
     ];
 
@@ -154,7 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < dialogues.length) {
         typeWriter(dialogues[i], alienText, 50, () => {
           i++;
-          setTimeout(typeNextDialogue, 0);
+          setTimeout(typeNextDialogue, 1200);
         });
       } else {
         if (finalCallback) finalCallback();
@@ -176,7 +184,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < leftDialogues.length) {
         typeWriter(leftDialogues[i], alienTextLeft, 50, () => {
           i++;
-          setTimeout(typeNextLeftDialogue, 0);
+          setTimeout(typeNextLeftDialogue, 1200);
         });
       } else {
         setTimeout(() => {
