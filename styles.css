@@ -45,7 +45,7 @@ body, html {
 .bubble-container {
   position: absolute;
   bottom: 70%;
-  left: 50%;
+  left: 47%;
   width: 450px;
   z-index: 3;
   opacity: 0;
@@ -66,10 +66,10 @@ body, html {
   left: 12%;
   width: 80%;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   z-index: 4;
-  padding-top: 18%;
+  padding-top: 20%;
   line-height: 1.0;
   opacity: 1;
   text-align: center;
