@@ -33,8 +33,8 @@ body, html {
 
 .ufo {
   position: absolute;
-  bottom: 35%;
-  left: 50%;
+  bottom: 42%;
+  left: 28%;
   transform: translateX(-50%);
   width: 400px;
   z-index: 2;
@@ -45,7 +45,7 @@ body, html {
 .bubble-container {
   position: absolute;
   bottom: 70%;
-  left: 62%;
+  left: 73%;
   width: 300px;
   z-index: 3;
   opacity: 0;
