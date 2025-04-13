@@ -38,7 +38,7 @@ body, html {
   z-index: 2;
   opacity: 0;
   transition: all 2s ease;
-  bottom: 48%; /* UFO initial vertical position */
+  bottom: 50%; /* UFO initial vertical position */
   width: 550px;
   z-index: 2;
 }
