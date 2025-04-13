@@ -33,10 +33,10 @@ body, html {
 
 .ufo {
   position: absolute;
-  bottom: 35%;
+  bottom: 50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 600px;
   z-index: 2;
   opacity: 0;
   transition: opacity 1s ease;
@@ -44,9 +44,9 @@ body, html {
 
 .bubble-container {
   position: absolute;
-  bottom: 70%;
+  bottom: 63%;
   left: 62%;
-  width: 300px;
+  width: 450px;
   z-index: 3;
   opacity: 0;
   transition: opacity 1s ease;
@@ -70,24 +70,24 @@ body, html {
   color: black;
   z-index: 4;
   padding-top: 16%;
-  line-height: 1.0;
+  line-height: 1.4;
   opacity: 1;
   text-align: center;
 }
 
 #alien {
   position: absolute;
-  bottom: 22%;
+  bottom: 37%;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 400px;
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 2;
 }
 
 .alien.move-to-bottom {
-  bottom: 42% !important;
+  bottom: 55% !important;
   transition: bottom 1s ease-in-out;
 }
 
