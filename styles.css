@@ -340,130 +340,175 @@ body, html {
   opacity: 0;
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Mobile Adjustments with Percentage-Based Sizing */
 @media screen and (max-width: 768px) {
-  /* Adjust UFO size and position */
+  /* Overall scale reduction for small screens */
+  body {
+    font-size: 14px;
+  }
+  
+  /* UFO positioning - percentage based */
   .ufo {
-    width: 250px; /* Smaller UFO for mobile */
-    bottom: 45%; /* Adjust position */
-  }
-  
-  /* Adjust bubble positions and sizes */
-  .bubble-container {
-    width: 200px; /* Smaller bubble */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's properly centered */
-    bottom: 65%; /* Move up slightly */
-  }
-  
-  .bubble-text {
-    font-size: 14px; /* Smaller text */
-    padding-top: 14%; /* Adjust text position */
-  }
-  
-  /* Adjust alien size and position */
-  #alien {
-    width: 150px; /* Smaller alien */
-    bottom: 25%; /* Adjust position */
-  }
-  
-  /* Adjust alien bubbles */
-  .alien-bubble {
-    width: 150px; /* Smaller bubble */
-    top: 40%; /* Adjust position */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's properly centered */
-  }
-  
-  .alien-text {
-    font-size: 0.8em; /* Smaller text */
-    padding-top: 40px; /* Adjust text position */
-    left: 15%;
-    width: 70%;
-  }
-  
-  /* Adjust left alien bubble */
-  .alien-bubble-left {
-    width: 200px; /* Smaller bubble */
-    top: 20%; /* Adjust position */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's properly centered */
-  }
-  
-  .alien-text-left {
-    font-size: 0.9em; /* Smaller text */
-    padding-top: 80px; /* Adjust text position */
-    padding-left: 20px;
-  }
-  
-  /* Adjust rocket size */
-  .rocket {
-    width: 80px; /* Smaller rocket */
-  }
-  
-  /* Adjust countdown button */
-  .countdown-button {
-    font-size: 1.2em; /* Smaller text */
-    padding: 10px 20px; /* Smaller padding */
-  }
-  
-  /* Adjust right bubble */
-  .right-bubble {
-    width: 120px;
-    height: 120px;
-    top: 20%;
-    right: 50%;
-    transform: translateX(50%);
-  }
-  
-  /* Happy Birthday Message */
-  #happyBirthdayMessage h2 {
-    font-size: 1.8rem;
-  }
-  
-  /* Next Button */
-  #nextButton {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-  }
-  
-  /* Floating emojis */
-  .floating-emoji {
-    font-size: 0.8rem;
-  }
-}
-
-/* For very small screens (most phones) */
-@media screen and (max-width: 480px) {
-  .ufo {
-    width: 180px; /* Even smaller UFO */
+    width: 50%; /* Percentage of screen width */
+    max-width: 200px;
     bottom: 50%;
   }
   
+  /* Bubble container - keep original positioning but resize */
   .bubble-container {
-    width: 160px;
-    bottom: 68%;
+    width: 60%; /* Percentage of screen width */
+    max-width: 200px;
+    /* Keep original left positioning */
+  }
+  
+  /* Adjust text padding for better fit */
+  .bubble-text {
+    font-size: 13px;
+    padding-top: 13%; /* Percentage of parent height */
+  }
+  
+  /* Alien adjustments - percentage based */
+  #alien {
+    width: 40%; /* Percentage of screen width */
+    max-width: 150px;
+    /* Keep original bottom positioning */
+  }
+  
+  /* Bubbles - resize but maintain original positioning */
+  .alien-bubble {
+    width: 60%; /* Percentage of screen width */
+    max-width: 180px;
+    /* Keep original positioning */
+  }
+  
+  .alien-bubble-left {
+    width: 60%; /* Percentage of screen width */
+    max-width: 180px;
+    /* Keep original positioning */
+  }
+  
+  /* Text adjustments for better readability */
+  .alien-text {
+    font-size: 0.8em;
+    padding-top: 35px;
+  }
+  
+  .alien-text-left {
+    font-size: 0.75em;
+    padding-top: 60px;
+  }
+  
+  /* Right bubble adjustments */
+  .right-bubble {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Rocket adjustments */
+  .rocket {
+    width: 15%; /* Percentage of screen width */
+    max-width: 60px;
+  }
+  
+  /* Button styling */
+  .countdown-button, #nextButton {
+    font-size: 1.1em;
+    padding: 8px 20px;
+  }
+  
+  /* Message adjustments */
+  #happyBirthdayMessage h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  /* Reduce sizes even more */
+  .ufo {
+    width: 45%; /* Smaller percentage for tiny screens */
+    max-width: 160px;
+  }
+  
+  .bubble-container {
+    width: 55%;
+    max-width: 160px;
   }
   
   .bubble-text {
     font-size: 12px;
-    padding-top: 12%;
+    padding-top: 10%; /* Smaller padding */
   }
   
   #alien {
-    width: 120px;
+    width: 35%;
+    max-width: 120px;
   }
   
   .alien-bubble, .alien-bubble-left {
-    width: 140px;
+    width: 55%;
+    max-width: 160px;
   }
   
-  .alien-text, .alien-text-left {
+  /* Adjust text padding for better fit */
+  .alien-text {
     font-size: 0.7em;
+    padding-top: 30px;
   }
   
-  .countdown-button {
+  .alien-text-left {
+    font-size: 0.7em;
+    padding-top: 50px;
+  }
+  
+  .right-bubble {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .countdown-button, #nextButton {
     font-size: 1em;
-    padding: 8px 16px;
+    padding: 6px 16px;
+  }
+}
+
+/* Very small screens - additional fixes */
+@media screen and (max-width: 360px) {
+  .bubble-text {
+    font-size: 11px;
+    padding-top: 8%; /* Even smaller padding */
+  }
+  
+  .alien-text {
+    font-size: 0.65em;
+    padding-top: 25px;
+  }
+  
+  .alien-text-left {
+    font-size: 0.65em;
+    padding-top: 45px;
+  }
+}
+
+/* Portrait orientation specific fixes */
+@media screen and (max-height: 640px) and (orientation: portrait) {
+  .ufo {
+    bottom: 40%;
+  }
+  
+  #alien {
+    bottom: 15%;
+  }
+  
+  .bubble-container {
+    bottom: 60%;
+  }
+  
+  #happyBirthdayMessage {
+    bottom: 25%;
+  }
+  
+  #nextButton {
+    bottom: 5%;
   }
 }
