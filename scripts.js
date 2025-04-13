@@ -187,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
       rocket.style.opacity = 0;
       rocket.style.display = 'none';
       triggerConfettiAndFireworks();
-      setTimeout(() => happyMsg.classList.add('visible'), 0);
+      setTimeout(() => happyMsg.classList.add('visible'), 100);
     }, { once: true });
   };
 
