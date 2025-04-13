@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
           rocket.style.transition = 'all 2s ease';
           rocket.style.opacity = 1;
-          rocket.style.bottom = '0%';
+          rocket.style.bottom = '10%';
 
           setTimeout(() => {
             alienBubbleLeft.style.opacity = 1;
@@ -147,7 +147,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (function next() {
       if (i < lines.length) {
         typeWriter(lines[i++], alienTextLeft, 50, () => setTimeout(next, 1200));
-      } else setTimeout(() => countdownButton.style.pointerEvents = 'auto', 100);
+      } else setTimeout(() => countdownButton.style.pointerEvents = 'auto', 50);
     })();
   };
 
