@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         alien.style.opacity = 1;
-        alien.style.bottom = '37%';
+        alien.style.bottom = '22%';
 
         setTimeout(() => {
           alienBubble.style.opacity = 1;
