@@ -84,14 +84,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // Alien appears
     setTimeout(() => {
       alien.style.opacity = 1;
-      alien.style.bottom = '30%';
+      alien.style.bottom = '33%';
 
       setTimeout(() => {
         alienBubble.style.opacity = 1;
         disableClick();
         typeAlienDialogue(() => {
           alien.style.transition = 'all 2s ease';
-          alien.style.bottom = '47%';
+          alien.style.bottom = '49.5%';
           alienBubble.style.transition = 'opacity 1s ease';
           alienBubble.style.opacity = 0;
 
