@@ -34,9 +34,9 @@ body, html {
 .ufo {
   position: absolute;
   bottom: 42%;
-  left: 28%;
+  left: 30%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 500px;
   z-index: 2;
   opacity: 0;
   transition: opacity 1s ease;
@@ -45,8 +45,8 @@ body, html {
 .bubble-container {
   position: absolute;
   bottom: 70%;
-  left: 73%;
-  width: 300px;
+  left: 68%;
+  width: 390px;
   z-index: 3;
   opacity: 0;
   transition: opacity 1s ease;
@@ -63,13 +63,13 @@ body, html {
 .bubble-text {
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 12%;
   width: 80%;
   margin-right: 10px;
   font-size: 18px;
   color: black;
   z-index: 4;
-  padding-top: 16%;
+  padding-top: 18%;
   line-height: 1.0;
   opacity: 1;
   text-align: center;
