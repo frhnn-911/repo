@@ -81,24 +81,23 @@ window.addEventListener('DOMContentLoaded', () => {
     typeUFOAndEnableClick();
   }, 2500);
 
-  // For both click and touch
-  const handleInteraction = () => {
+  document.body.addEventListener('click', () => {
     if (clickEnabled && !ufoClicked) {
       ufoClicked = true;
       disableClick();
       
-      // 🔊 Start background music here
-      bgMusic.volume = 0.15;
-      bgMusic.play().then(() => {
-        console.log('Music started on UFO click ✅');
-      }).catch(err => {
-        console.log('Music failed to play:', err);
-      });
-  
-      ufo.style.transition = 'all 2s ease';
-      ufo.style.bottom = '100%';
-      ufo.style.opacity = 0;
-      bubble.style.opacity = 0;
+          // 🔊 Start background music here
+          bgMusic.volume = 0.15;
+          bgMusic.play().then(() => {
+            console.log('Music started on UFO click ✅');
+          }).catch(err => {
+            console.log('Music failed to play:', err);
+          });
+      
+          ufo.style.transition = 'all 2s ease';
+          ufo.style.bottom = '100%';
+          ufo.style.opacity = 0;
+          bubble.style.opacity = 0;
       
 
       setTimeout(() => {
@@ -137,13 +136,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 500);
       }, 700);
     }
-  };
-
-  // Add both event listeners
-  document.body.addEventListener('click', handleInteraction);
-  document.body.addEventListener('touchstart', (e) => {
-    e.preventDefault(); // Prevent default touch behavior
-    handleInteraction();
   });
 
   function typeAlienDialogue(finalCallback) {
@@ -153,7 +145,7 @@ window.addEventListener('DOMContentLoaded', () => {
       "Lagta hai koi cute sa sapna chal raha hai...",
       "Wait...! yeh sapna nahi, asli glow-up hai!",
       "Ab yaad aaya! Boss ne tmhari cuteness ka zikr kiya tha..!!",
-      "Boss ne bola tha — 'jab wo aaye, to dil se welcome karna!'",
+      "Boss ne bola tha — ‘jab wo aaye, to dil se welcome karna!’",
       "Cutiee... tum toh expectation se bhi zyada cute nikli!"
     ];
 
