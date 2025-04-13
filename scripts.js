@@ -154,7 +154,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < dialogues.length) {
         typeWriter(dialogues[i], alienText, 50, () => {
           i++;
-          setTimeout(typeNextDialogue, 1200);
+          setTimeout(typeNextDialogue, 0);
         });
       } else {
         if (finalCallback) finalCallback();
@@ -176,7 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < leftDialogues.length) {
         typeWriter(leftDialogues[i], alienTextLeft, 50, () => {
           i++;
-          setTimeout(typeNextLeftDialogue, 1200);
+          setTimeout(typeNextLeftDialogue, 0);
         });
       } else {
         setTimeout(() => {
