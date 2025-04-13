@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
           rocket.style.transition = 'all 2s ease';
           rocket.style.opacity = 1;
-          rocket.style.bottom = '10%';
+          rocket.style.bottom = '5%';
 
           setTimeout(() => {
             alienBubbleLeft.style.opacity = 1;
