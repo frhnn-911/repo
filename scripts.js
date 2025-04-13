@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
         disableClick();
         typeAlienDialogue(() => {
           alien.style.transition = 'all 2s ease';
-          alien.style.bottom = '42%';
+          alien.style.bottom = '47%';
           alienBubble.style.transition = 'opacity 1s ease';
           alienBubble.style.opacity = 0;
 
