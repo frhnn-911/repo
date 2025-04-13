@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (i < ufoDialogues.length) {
         typeWriter(ufoDialogues[i], bubbleText, 50, () => {
           i++;
-          setTimeout(typeNextDialogue, 1200);
+          setTimeout(typeNextDialogue, 0);
         });
       } else {
         setTimeout(enableClick, 100); // enableClick after all dialogues done
@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
     bubble.style.opacity = 1;
     disableClick();
     typeUFOAndEnableClick();
-  }, 2500);
+  }, 0);
 
   document.body.addEventListener('click', () => {
     if (clickEnabled && !ufoClicked) {
@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         alien.style.opacity = 1;
-        alien.style.bottom = '22%';
+        alien.style.bottom = '37%';
 
         setTimeout(() => {
           alienBubble.style.opacity = 1;
@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
           typeAlienDialogue(() => {
             setTimeout(() => {
               alien.style.transition = 'all 2s ease';
-              alien.style.bottom = '42%';
+              alien.style.bottom = '55%';
               alienBubble.style.transition = 'opacity 1s ease';
               alienBubble.style.opacity = 0;
 
